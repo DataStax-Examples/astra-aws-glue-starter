@@ -1,4 +1,4 @@
-package com.datastax.astra.glue
+package com.datastax.astra
 
 /*
  * Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.

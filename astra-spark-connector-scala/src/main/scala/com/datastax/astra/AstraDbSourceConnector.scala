@@ -1,4 +1,4 @@
-package com.datastax.astra.glue
+package com.datastax.astra
 
 import com.datastax.spark.connector._
 import com.datastax.spark.connector.cql.CassandraConnector

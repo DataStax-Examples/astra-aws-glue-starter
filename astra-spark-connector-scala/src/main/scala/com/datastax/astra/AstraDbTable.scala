@@ -1,4 +1,4 @@
-package com.datastax.astra.glue
+package com.datastax.astra
 
 import org.apache.spark.sql.connector.catalog.{SupportsRead, SupportsWrite, Table, TableCapability}
 import org.apache.spark.sql.connector.read.ScanBuilder
@@ -16,9 +16,11 @@ class AstraDbTable extends Table with SupportsRead with SupportsWrite {
       .add("id", "int")
       .add("value", "int")
 
+  import scala.collection.JavaConverters._
+
   override def capabilities(): util.Set[TableCapability] = Set(
     TableCapability.BATCH_READ,
-    TableCapability.BATCH_WRITE).asJava // Supports BATCH read/write mode
+    TableCapability.BATCH_WRITE).asJava; // Supports BATCH read/write mode
 
   // Read
   override def newScanBuilder(caseInsensitiveStringMap: CaseInsensitiveStringMap): ScanBuilder =

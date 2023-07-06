@@ -1,4 +1,4 @@
-package com.datastax.astra.glue
+package com.datastax.astra
 
 import org.apache.spark.sql.types._
 
